@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SVProgressHUD
+
 
 class ViewController: UIViewController {
     
@@ -27,23 +27,40 @@ class ViewController: UIViewController {
         
         questionLabel.text = allQuestions.list.first?.questionText
         
+        
     }
     
     
-    @IBAction func answerButtonTapped(_ sender: UIButton) {
+    
+    @IBAction func answerButtonTapped(_ sender: AnyObject) {
         
         if sender.tag == 1 {
-            print(true)
+            pickedAnswer = true
         } else if sender.tag == 2 {
-            print(false)
+            pickedAnswer = false
         } else {
             print("Error")
         }
         
+        checkAnswer()
+        questionNumber += 1
+        
     }
     
     
-    
+    private func checkAnswer() {
+        
+        let correctAnswer = allQuestions.list[questionNumber].answer
+        
+        
+        if pickedAnswer == correctAnswer {
+            
+            score += 1
+        } else {
+            
+        }
+        
+    }
     
 
 }
