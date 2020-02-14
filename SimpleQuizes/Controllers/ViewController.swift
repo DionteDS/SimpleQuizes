@@ -28,9 +28,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        questionLabel.text = allQuestions.list.first?.questionText
+        nextQuestion()
         
-        
+        questionLabel.layer.cornerRadius = 5.0
+        questionLabel.layer.masksToBounds = true
+        questionLabel.layer.borderWidth = 2
+        questionLabel.layer.borderColor = UIColor.black.cgColor
     }
     
     
@@ -47,15 +50,47 @@ class ViewController: UIViewController {
         
         checkAnswer()
         questionNumber += 1
+        nextQuestion()
         
     }
     
+    private func updateUI() {
+        
+        scoreLabel.text = "Score: \(score)"
+        questionNumberLabel.text = "\(questionNumber + 1) / 13"
+        
+        progressBar.frame.size.width = (view.frame.size.width) / 13 * CGFloat(questionNumber + 1)
+        
+    }
+    
+    private func nextQuestion() {
+        
+        if questionNumber <= 12 {
+            questionLabel.text = allQuestions.list[questionNumber].questionText
+            
+            updateUI()
+        } else {
+            let alert = UIAlertController(title: "Good Job!", message: "You have finished all questions. Would you like to start over?", preferredStyle: .alert)
+            
+            let restartAction = UIAlertAction(title: "Restart", style: .default) { (action) in
+                self.restart()
+            }
+            
+            alert.addAction(restartAction)
+            present(alert, animated: true, completion: nil)
+        }
+        
+    }
+    
+    
+    // MARK: - Check answer
     
     private func checkAnswer() {
         
         let correctAnswer = allQuestions.list[questionNumber].answer
         
-        
+        // if user gets answer right display a green checkmark with the string correct!
+        // else display an red X with the string wrong!
         if pickedAnswer == correctAnswer {
             hud.textLabel.text = "Correct"
             hud.indicatorView = JGProgressHUDSuccessIndicatorView(image: UIImage(named: "check")!)
@@ -69,6 +104,12 @@ class ViewController: UIViewController {
             hud.dismiss(afterDelay: 0.3)
         }
         
+    }
+    
+    private func restart() {
+        score = 0
+        questionNumber = 0
+        nextQuestion()
     }
     
 
