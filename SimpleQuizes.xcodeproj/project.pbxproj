@@ -13,9 +13,11 @@
 		421DC06423F7263C0042BD61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 421DC06223F7263C0042BD61 /* Main.storyboard */; };
 		421DC06623F7263D0042BD61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 421DC06523F7263D0042BD61 /* Assets.xcassets */; };
 		421DC06923F7263D0042BD61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 421DC06723F7263D0042BD61 /* LaunchScreen.storyboard */; };
+		78053F366F999DE9BED59D29 /* Pods_SimpleQuizes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 314576AC6BFC7895EFFCAD00 /* Pods_SimpleQuizes.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		314576AC6BFC7895EFFCAD00 /* Pods_SimpleQuizes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleQuizes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		421DC05923F7263C0042BD61 /* SimpleQuizes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleQuizes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		421DC05C23F7263C0042BD61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		421DC05E23F7263C0042BD61 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		421DC06523F7263D0042BD61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		421DC06823F7263D0042BD61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		421DC06A23F7263D0042BD61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B370D59C6B813FE92A4EB73 /* Pods-SimpleQuizes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleQuizes.release.xcconfig"; path = "Target Support Files/Pods-SimpleQuizes/Pods-SimpleQuizes.release.xcconfig"; sourceTree = "<group>"; };
+		F67E5B0B64760A73FD0131C4 /* Pods-SimpleQuizes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleQuizes.debug.xcconfig"; path = "Target Support Files/Pods-SimpleQuizes/Pods-SimpleQuizes.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78053F366F999DE9BED59D29 /* Pods_SimpleQuizes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E3E65CAD511585BFE34CF6E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F67E5B0B64760A73FD0131C4 /* Pods-SimpleQuizes.debug.xcconfig */,
+				7B370D59C6B813FE92A4EB73 /* Pods-SimpleQuizes.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		1F7CEA291E7C99616701C654 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				314576AC6BFC7895EFFCAD00 /* Pods_SimpleQuizes.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		421DC05023F7263B0042BD61 = {
 			isa = PBXGroup;
 			children = (
 				421DC05B23F7263C0042BD61 /* SimpleQuizes */,
 				421DC05A23F7263C0042BD61 /* Products */,
+				1E3E65CAD511585BFE34CF6E /* Pods */,
+				1F7CEA291E7C99616701C654 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 421DC06D23F7263D0042BD61 /* Build configuration list for PBXNativeTarget "SimpleQuizes" */;
 			buildPhases = (
+				C69CEBF333881F47BB1DD31A /* [CP] Check Pods Manifest.lock */,
 				421DC05523F7263B0042BD61 /* Sources */,
 				421DC05623F7263B0042BD61 /* Frameworks */,
 				421DC05723F7263B0042BD61 /* Resources */,
+				38473BB296213CEA7BA4ED4C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		38473BB296213CEA7BA4ED4C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimpleQuizes/Pods-SimpleQuizes-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimpleQuizes/Pods-SimpleQuizes-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SimpleQuizes/Pods-SimpleQuizes-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C69CEBF333881F47BB1DD31A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SimpleQuizes-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		421DC05523F7263B0042BD61 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		421DC06E23F7263D0042BD61 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F67E5B0B64760A73FD0131C4 /* Pods-SimpleQuizes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +369,7 @@
 		};
 		421DC06F23F7263D0042BD61 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B370D59C6B813FE92A4EB73 /* Pods-SimpleQuizes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

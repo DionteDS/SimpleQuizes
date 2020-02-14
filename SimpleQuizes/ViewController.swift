@@ -7,14 +7,30 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var questionNumberLabel: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var progressBar: UIView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
-
+    
+    
+    @IBAction func answerButtonTapped(_ sender: UIButton) {
+        
+        
+    }
+    
+    
+    
+    
 
 }
 

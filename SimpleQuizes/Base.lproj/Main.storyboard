@@ -34,6 +34,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="20"/>
                                 <state key="normal" title="True"/>
+                                <connections>
+                                    <action selector="answerButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pxM-Gb-zKg"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hk2-XV-kGj">
                                 <rect key="frame" x="244" y="454" width="150" height="150"/>
@@ -44,6 +47,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="20"/>
                                 <state key="normal" title="False"/>
+                                <connections>
+                                    <action selector="answerButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GN5-4r-vKU"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/13" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0so-aq-j6C">
                                 <rect key="frame" x="20" y="741" width="70" height="30"/>
@@ -87,6 +93,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="progressBar" destination="YRE-g9-8Ac" id="WyC-ct-fAr"/>
+                        <outlet property="questionLabel" destination="Bhf-wM-WhX" id="vIS-Nn-9eN"/>
+                        <outlet property="questionNumberLabel" destination="0so-aq-j6C" id="eJV-R8-Lqb"/>
+                        <outlet property="scoreLabel" destination="ooa-sl-gFi" id="6MI-cF-0Ag"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
