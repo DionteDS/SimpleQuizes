@@ -5,6 +5,6 @@ target 'SimpleQuizes' do
   use_frameworks!
 
   # Pods for SimpleQuizes
-  pod 'SVProgressHUD'
+  pod 'JGProgressHUD'
 
 end

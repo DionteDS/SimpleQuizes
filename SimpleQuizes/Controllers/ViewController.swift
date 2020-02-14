@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import JGProgressHUD
 
 
 class ViewController: UIViewController {
@@ -20,6 +21,8 @@ class ViewController: UIViewController {
     var pickedAnswer = false
     var questionNumber = 0
     var score = 0
+    
+    var hud = JGProgressHUD(style: .dark)
     
 
     override func viewDidLoad() {
@@ -54,10 +57,16 @@ class ViewController: UIViewController {
         
         
         if pickedAnswer == correctAnswer {
-            
+            hud.textLabel.text = "Correct"
+            hud.indicatorView = JGProgressHUDSuccessIndicatorView(image: UIImage(named: "check")!)
+            hud.show(in: self.view)
+            hud.dismiss(afterDelay: 0.3)
             score += 1
         } else {
-            
+            hud.textLabel.text = "Wrong!"
+            hud.indicatorView = JGProgressHUDErrorIndicatorView(image: UIImage(named: "error")!)
+            hud.show(in: self.view)
+            hud.dismiss(afterDelay: 0.3)
         }
         
     }

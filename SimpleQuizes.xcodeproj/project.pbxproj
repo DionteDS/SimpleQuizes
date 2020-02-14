@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2EE135A91CB584CCC5A36267 /* Pods_SimpleQuizes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BBA54E5C620F2133AB6850F /* Pods_SimpleQuizes.framework */; };
 		421DC05D23F7263C0042BD61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421DC05C23F7263C0042BD61 /* AppDelegate.swift */; };
 		421DC05F23F7263C0042BD61 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421DC05E23F7263C0042BD61 /* SceneDelegate.swift */; };
 		421DC06123F7263C0042BD61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421DC06023F7263C0042BD61 /* ViewController.swift */; };
@@ -15,11 +16,11 @@
 		421DC06923F7263D0042BD61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 421DC06723F7263D0042BD61 /* LaunchScreen.storyboard */; };
 		42DDA23823F72FB200A0798B /* ScienceQuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DDA23723F72FB200A0798B /* ScienceQuestionModel.swift */; };
 		42DDA23A23F7300600A0798B /* ScienceQuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DDA23923F7300600A0798B /* ScienceQuestionBank.swift */; };
-		78053F366F999DE9BED59D29 /* Pods_SimpleQuizes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 314576AC6BFC7895EFFCAD00 /* Pods_SimpleQuizes.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		314576AC6BFC7895EFFCAD00 /* Pods_SimpleQuizes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleQuizes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BBA54E5C620F2133AB6850F /* Pods_SimpleQuizes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleQuizes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A7BC96F77D8A559F065BBB7 /* Pods-SimpleQuizes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleQuizes.release.xcconfig"; path = "Target Support Files/Pods-SimpleQuizes/Pods-SimpleQuizes.release.xcconfig"; sourceTree = "<group>"; };
 		421DC05923F7263C0042BD61 /* SimpleQuizes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleQuizes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		421DC05C23F7263C0042BD61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		421DC05E23F7263C0042BD61 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,8 +31,7 @@
 		421DC06A23F7263D0042BD61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42DDA23723F72FB200A0798B /* ScienceQuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScienceQuestionModel.swift; sourceTree = "<group>"; };
 		42DDA23923F7300600A0798B /* ScienceQuestionBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScienceQuestionBank.swift; sourceTree = "<group>"; };
-		7B370D59C6B813FE92A4EB73 /* Pods-SimpleQuizes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleQuizes.release.xcconfig"; path = "Target Support Files/Pods-SimpleQuizes/Pods-SimpleQuizes.release.xcconfig"; sourceTree = "<group>"; };
-		F67E5B0B64760A73FD0131C4 /* Pods-SimpleQuizes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleQuizes.debug.xcconfig"; path = "Target Support Files/Pods-SimpleQuizes/Pods-SimpleQuizes.debug.xcconfig"; sourceTree = "<group>"; };
+		61D09F760E598E79A325E8B0 /* Pods-SimpleQuizes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleQuizes.debug.xcconfig"; path = "Target Support Files/Pods-SimpleQuizes/Pods-SimpleQuizes.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,7 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78053F366F999DE9BED59D29 /* Pods_SimpleQuizes.framework in Frameworks */,
+				2EE135A91CB584CCC5A36267 /* Pods_SimpleQuizes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,18 +49,10 @@
 		1E3E65CAD511585BFE34CF6E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F67E5B0B64760A73FD0131C4 /* Pods-SimpleQuizes.debug.xcconfig */,
-				7B370D59C6B813FE92A4EB73 /* Pods-SimpleQuizes.release.xcconfig */,
+				61D09F760E598E79A325E8B0 /* Pods-SimpleQuizes.debug.xcconfig */,
+				2A7BC96F77D8A559F065BBB7 /* Pods-SimpleQuizes.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		1F7CEA291E7C99616701C654 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				314576AC6BFC7895EFFCAD00 /* Pods_SimpleQuizes.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		421DC05023F7263B0042BD61 = {
@@ -69,7 +61,7 @@
 				421DC05B23F7263C0042BD61 /* SimpleQuizes */,
 				421DC05A23F7263C0042BD61 /* Products */,
 				1E3E65CAD511585BFE34CF6E /* Pods */,
-				1F7CEA291E7C99616701C654 /* Frameworks */,
+				84C37680A50485AA6B4A65E5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,6 +113,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		84C37680A50485AA6B4A65E5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1BBA54E5C620F2133AB6850F /* Pods_SimpleQuizes.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -128,11 +128,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 421DC06D23F7263D0042BD61 /* Build configuration list for PBXNativeTarget "SimpleQuizes" */;
 			buildPhases = (
-				C69CEBF333881F47BB1DD31A /* [CP] Check Pods Manifest.lock */,
+				C17EC56F032C36901EC1EEC1 /* [CP] Check Pods Manifest.lock */,
 				421DC05523F7263B0042BD61 /* Sources */,
 				421DC05623F7263B0042BD61 /* Frameworks */,
 				421DC05723F7263B0042BD61 /* Resources */,
-				38473BB296213CEA7BA4ED4C /* [CP] Embed Pods Frameworks */,
+				AA37A2320D55816F1CE6A762 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -190,7 +190,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		38473BB296213CEA7BA4ED4C /* [CP] Embed Pods Frameworks */ = {
+		AA37A2320D55816F1CE6A762 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -207,7 +207,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SimpleQuizes/Pods-SimpleQuizes-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C69CEBF333881F47BB1DD31A /* [CP] Check Pods Manifest.lock */ = {
+		C17EC56F032C36901EC1EEC1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -382,7 +382,7 @@
 		};
 		421DC06E23F7263D0042BD61 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F67E5B0B64760A73FD0131C4 /* Pods-SimpleQuizes.debug.xcconfig */;
+			baseConfigurationReference = 61D09F760E598E79A325E8B0 /* Pods-SimpleQuizes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -400,7 +400,7 @@
 		};
 		421DC06F23F7263D0042BD61 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7B370D59C6B813FE92A4EB73 /* Pods-SimpleQuizes.release.xcconfig */;
+			baseConfigurationReference = 2A7BC96F77D8A559F065BBB7 /* Pods-SimpleQuizes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
