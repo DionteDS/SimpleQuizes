@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		421DC06423F7263C0042BD61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 421DC06223F7263C0042BD61 /* Main.storyboard */; };
 		421DC06623F7263D0042BD61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 421DC06523F7263D0042BD61 /* Assets.xcassets */; };
 		421DC06923F7263D0042BD61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 421DC06723F7263D0042BD61 /* LaunchScreen.storyboard */; };
+		42DDA23823F72FB200A0798B /* ScienceQuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DDA23723F72FB200A0798B /* ScienceQuestionModel.swift */; };
+		42DDA23A23F7300600A0798B /* ScienceQuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DDA23923F7300600A0798B /* ScienceQuestionBank.swift */; };
 		78053F366F999DE9BED59D29 /* Pods_SimpleQuizes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 314576AC6BFC7895EFFCAD00 /* Pods_SimpleQuizes.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +28,8 @@
 		421DC06523F7263D0042BD61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		421DC06823F7263D0042BD61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		421DC06A23F7263D0042BD61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42DDA23723F72FB200A0798B /* ScienceQuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScienceQuestionModel.swift; sourceTree = "<group>"; };
+		42DDA23923F7300600A0798B /* ScienceQuestionBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScienceQuestionBank.swift; sourceTree = "<group>"; };
 		7B370D59C6B813FE92A4EB73 /* Pods-SimpleQuizes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleQuizes.release.xcconfig"; path = "Target Support Files/Pods-SimpleQuizes/Pods-SimpleQuizes.release.xcconfig"; sourceTree = "<group>"; };
 		F67E5B0B64760A73FD0131C4 /* Pods-SimpleQuizes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleQuizes.debug.xcconfig"; path = "Target Support Files/Pods-SimpleQuizes/Pods-SimpleQuizes.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -48,7 +52,6 @@
 				F67E5B0B64760A73FD0131C4 /* Pods-SimpleQuizes.debug.xcconfig */,
 				7B370D59C6B813FE92A4EB73 /* Pods-SimpleQuizes.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -83,13 +86,39 @@
 			children = (
 				421DC05C23F7263C0042BD61 /* AppDelegate.swift */,
 				421DC05E23F7263C0042BD61 /* SceneDelegate.swift */,
-				421DC06023F7263C0042BD61 /* ViewController.swift */,
-				421DC06223F7263C0042BD61 /* Main.storyboard */,
+				42DDA23623F72F8E00A0798B /* Models */,
+				42DDA23423F72F7800A0798B /* Controllers */,
 				421DC06523F7263D0042BD61 /* Assets.xcassets */,
 				421DC06723F7263D0042BD61 /* LaunchScreen.storyboard */,
 				421DC06A23F7263D0042BD61 /* Info.plist */,
 			);
 			path = SimpleQuizes;
+			sourceTree = "<group>";
+		};
+		42DDA23423F72F7800A0798B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				421DC06023F7263C0042BD61 /* ViewController.swift */,
+				42DDA23523F72F8300A0798B /* Views */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		42DDA23523F72F8300A0798B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				421DC06223F7263C0042BD61 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		42DDA23623F72F8E00A0798B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				42DDA23723F72FB200A0798B /* ScienceQuestionModel.swift */,
+				42DDA23923F7300600A0798B /* ScienceQuestionBank.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,8 +236,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42DDA23823F72FB200A0798B /* ScienceQuestionModel.swift in Sources */,
 				421DC06123F7263C0042BD61 /* ViewController.swift in Sources */,
 				421DC05D23F7263C0042BD61 /* AppDelegate.swift in Sources */,
+				42DDA23A23F7300600A0798B /* ScienceQuestionBank.swift in Sources */,
 				421DC05F23F7263C0042BD61 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
