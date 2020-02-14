@@ -106,9 +106,14 @@ class ViewController: UIViewController {
         
     }
     
+    //MARK: - Restart the quiz
+    
+    // Restart the quiz and also shuffle the questions
     private func restart() {
         score = 0
         questionNumber = 0
+        let shuffleQuestion = allQuestions.list.shuffled()
+        allQuestions.list = shuffleQuestion
         nextQuestion()
     }
     
