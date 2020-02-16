@@ -29,11 +29,20 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         nextQuestion()
+        setupNavBar()
         
         questionLabel.layer.cornerRadius = 5.0
         questionLabel.layer.masksToBounds = true
         questionLabel.layer.borderWidth = 2
         questionLabel.layer.borderColor = UIColor.black.cgColor
+    }
+    
+    func setupNavBar() {
+        
+        navigationItem.title = "Science Quiz"
+        
+        navigationItem.largeTitleDisplayMode = .always
+        
     }
     
     

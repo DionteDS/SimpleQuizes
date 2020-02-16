@@ -107,6 +107,7 @@
                     <navigationItem key="navigationItem" id="JPC-gw-Igs"/>
                     <connections>
                         <outlet property="categoryView" destination="Cwt-3Z-UuL" id="6In-MX-hyy"/>
+                        <segue destination="UAc-hU-HLO" kind="show" identifier="goToSciVC" id="AAv-At-A6F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aMf-rb-6hf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -122,7 +123,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.94999998807907104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNW-qg-eFl">
-                                <rect key="frame" x="20" y="114" width="374" height="90"/>
+                                <rect key="frame" x="20" y="210" width="374" height="90"/>
                                 <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="SlB-T7-PHM"/>
@@ -132,7 +133,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KtH-km-mX2" customClass="CustomButton" customModule="SimpleQuizes" customModuleProvider="target">
-                                <rect key="frame" x="20" y="454" width="150" height="150"/>
+                                <rect key="frame" x="20" y="450" width="150" height="150"/>
                                 <color key="backgroundColor" red="0.51572199860000001" green="1" blue="0.52992329029999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="Jd3-Fv-RkE"/>
@@ -147,7 +148,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpx-BT-jsi" customClass="CustomButton" customModule="SimpleQuizes" customModuleProvider="target">
-                                <rect key="frame" x="244" y="454" width="150" height="150"/>
+                                <rect key="frame" x="244" y="450" width="150" height="150"/>
                                 <color key="backgroundColor" red="0.92689165610000002" green="0.2213026897" blue="0.1743899341" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="3vI-Ke-5P9"/>
@@ -162,7 +163,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/13" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pyp-Ri-TpE">
-                                <rect key="frame" x="20" y="741" width="70" height="30"/>
+                                <rect key="frame" x="20" y="737" width="70" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Xxp-Xb-p2B"/>
                                     <constraint firstAttribute="width" constant="70" id="f0y-dM-ccG"/>
@@ -172,7 +173,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PLU-iW-lXk">
-                                <rect key="frame" x="294" y="734" width="100" height="40"/>
+                                <rect key="frame" x="294" y="730" width="100" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="8k3-CS-8m4"/>
                                     <constraint firstAttribute="width" constant="100" id="nqk-pf-bMI"/>
@@ -192,12 +193,12 @@
                             <constraint firstItem="KtH-km-mX2" firstAttribute="leading" secondItem="9ms-Ic-a7X" secondAttribute="leading" constant="20" id="9TJ-aZ-H8f"/>
                             <constraint firstItem="Pyp-Ri-TpE" firstAttribute="leading" secondItem="9ms-Ic-a7X" secondAttribute="leading" constant="20" id="BH3-gv-r5I"/>
                             <constraint firstItem="9ms-Ic-a7X" firstAttribute="trailing" secondItem="hpx-BT-jsi" secondAttribute="trailing" constant="20" id="E1c-Qn-6bJ"/>
-                            <constraint firstItem="hpx-BT-jsi" firstAttribute="top" secondItem="aNW-qg-eFl" secondAttribute="bottom" constant="250" id="JLu-gj-TFv"/>
+                            <constraint firstItem="hpx-BT-jsi" firstAttribute="top" secondItem="aNW-qg-eFl" secondAttribute="bottom" constant="150" id="JLu-gj-TFv"/>
                             <constraint firstItem="aNW-qg-eFl" firstAttribute="top" secondItem="9ms-Ic-a7X" secondAttribute="top" constant="70" id="V8M-tS-7Uq"/>
                             <constraint firstItem="9ms-Ic-a7X" firstAttribute="trailing" secondItem="PLU-iW-lXk" secondAttribute="trailing" constant="20" id="WvL-IO-MVS"/>
                             <constraint firstItem="PLU-iW-lXk" firstAttribute="top" secondItem="hpx-BT-jsi" secondAttribute="bottom" constant="130" id="a91-Qu-SWE"/>
                             <constraint firstItem="9ms-Ic-a7X" firstAttribute="trailing" secondItem="aNW-qg-eFl" secondAttribute="trailing" constant="20" id="fND-BK-KoZ"/>
-                            <constraint firstItem="KtH-km-mX2" firstAttribute="top" secondItem="aNW-qg-eFl" secondAttribute="bottom" constant="250" id="hfP-UD-n3c"/>
+                            <constraint firstItem="KtH-km-mX2" firstAttribute="top" secondItem="aNW-qg-eFl" secondAttribute="bottom" constant="150" id="hfP-UD-n3c"/>
                             <constraint firstItem="aNW-qg-eFl" firstAttribute="leading" secondItem="9ms-Ic-a7X" secondAttribute="leading" constant="20" id="nb5-mF-Gdj"/>
                             <constraint firstItem="Pyp-Ri-TpE" firstAttribute="top" secondItem="KtH-km-mX2" secondAttribute="bottom" constant="137" id="rtP-bh-zij"/>
                         </constraints>
@@ -213,7 +214,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ov-K1-ViQ" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="925" y="-68"/>
+            <point key="canvasLocation" x="655" y="-68"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="h40-Nu-lwn">

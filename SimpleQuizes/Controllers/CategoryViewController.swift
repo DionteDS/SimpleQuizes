@@ -8,6 +8,13 @@
 
 import UIKit
 
+private enum Category: String {
+    case Science = "Science Quiz"
+    case Space = "Space Quiz"
+    case Planet = "Planet Quiz"
+    case Dinosaur = "Dinosaur Quiz"
+}
+
 class CategoryViewController: UIViewController {
     
     @IBOutlet weak var categoryView: UICollectionView!
@@ -87,5 +94,24 @@ extension CategoryViewController: UICollectionViewDelegate, UICollectionViewData
         return cell
         
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        if let rowIndex = collectionView.indexPathsForSelectedItems?.first {
+            row = rowIndex.item
+        }
+        
+        let categoryPicked = categories[row]
+        
+        switch categoryPicked {
+        case Category.Science.rawValue:
+            performSegue(withIdentifier: "goToSciVC", sender: self)
+        default:
+            print("Error no vc's")
+        }
+        
+        
+    }
+    
     
 }
