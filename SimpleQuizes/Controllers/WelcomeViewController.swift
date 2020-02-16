@@ -20,8 +20,7 @@ class WelcomeViewController: UIViewController {
         nextBtn.layer.borderWidth = 2
         nextBtn.layer.borderColor = UIColor.black.cgColor
         nextBtn.layer.masksToBounds = true
-        
-        navigationController?.navigationBar.barTintColor = UIColor(red: 49/255, green: 57/255, blue: 94/255, alpha: 1.0)
+
         
     }
     

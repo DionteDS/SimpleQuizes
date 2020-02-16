@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="categoryCell" id="gTV-IL-0wX" customClass="CategoryCollectionViewCell" customModule="SimpleQuizes" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yLZ-82-4rf">
+                        <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Science" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIo-0s-mWn">
+                                <rect key="frame" x="33.5" y="49" width="53" height="22"/>
+                                <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.43854807184189426" blue="0.41158524551795883" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="cIo-0s-mWn" firstAttribute="centerY" secondItem="yLZ-82-4rf" secondAttribute="centerY" id="3Db-fm-EPn"/>
+                            <constraint firstItem="cIo-0s-mWn" firstAttribute="centerX" secondItem="yLZ-82-4rf" secondAttribute="centerX" id="D1j-xB-gUr"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="yLZ-82-4rf" secondAttribute="trailing" id="dBH-CL-NIJ"/>
+                <constraint firstItem="yLZ-82-4rf" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="hWh-Jq-cYt"/>
+                <constraint firstItem="yLZ-82-4rf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="q71-C0-3r6"/>
+                <constraint firstAttribute="bottom" secondItem="yLZ-82-4rf" secondAttribute="bottom" id="qvX-CY-ndd"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="categoryLabel" destination="cIo-0s-mWn" id="1hE-Ei-2DJ"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="137"/>
+        </collectionViewCell>
+    </objects>
+</document>
