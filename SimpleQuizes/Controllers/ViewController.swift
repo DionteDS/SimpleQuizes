@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import JGProgressHUD
+import JGProgressHUD 
 
 
 class ViewController: UIViewController {
@@ -54,7 +54,8 @@ class ViewController: UIViewController {
         
     }
     
-    private func updateUI() {
+    
+    func updateUI() {
         
         scoreLabel.text = "Score: \(score)"
         questionNumberLabel.text = "\(questionNumber + 1) / 13"
