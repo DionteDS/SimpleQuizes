@@ -34,6 +34,9 @@
                                 <state key="normal" title="Next">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="nextDidTapped:" destination="bPA-zo-K6J" eventType="touchUpInside" id="Y8i-0L-MFF"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.19109300110433344" green="0.22339795844284624" blue="0.36950745558375631" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -50,17 +53,17 @@
                     <navigationItem key="navigationItem" id="jep-tl-zOk"/>
                     <connections>
                         <outlet property="nextBtn" destination="L8p-ai-QUB" id="MX5-Rg-E0Z"/>
-                        <segue destination="x4C-d0-4ef" kind="show" id="Hag-9O-R4O"/>
+                        <segue destination="x4C-d0-4ef" kind="show" identifier="goToCategoryVC" id="Hag-9O-R4O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y2f-NQ-HMR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1089.8550724637682" y="-68.303571428571431"/>
         </scene>
-        <!--View Controller-->
+        <!--Category View Controller-->
         <scene sceneID="way-gA-hZw">
             <objects>
-                <viewController id="x4C-d0-4ef" sceneMemberID="viewController">
+                <viewController id="x4C-d0-4ef" customClass="CategoryViewController" customModule="SimpleQuizes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V29-hZ-G08">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -25,5 +25,12 @@ class WelcomeViewController: UIViewController {
         
     }
     
+    
+    @IBAction func nextDidTapped(_ sender: UIButton) {
+        
+        performSegue(withIdentifier: "goToCategoryVC", sender: self)
+        
+    }
+    
 
 }
