@@ -106,6 +106,8 @@ extension CategoryViewController: UICollectionViewDelegate, UICollectionViewData
         switch categoryPicked {
         case Category.Science.rawValue:
             performSegue(withIdentifier: "goToSciVC", sender: self)
+        case Category.Space.rawValue:
+            performSegue(withIdentifier: "goToSpaceVC", sender: self)
         default:
             print("Error no vc's")
         }
