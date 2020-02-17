@@ -307,6 +307,7 @@
                     <navigationItem key="navigationItem" id="vOZ-tS-ISO"/>
                     <connections>
                         <outlet property="answerTextField" destination="dNQ-77-eAN" id="4Io-fv-YVE"/>
+                        <outlet property="checkBtn" destination="hcW-wq-xXd" id="qzJ-oV-yf6"/>
                         <outlet property="progressBar" destination="NN3-hE-wFp" id="vb7-OC-nwU"/>
                         <outlet property="questionLabel" destination="tdQ-Dk-0Rs" id="MWJ-D6-RYA"/>
                         <outlet property="questionNumberLabel" destination="hcU-Vr-1ly" id="3xI-GL-TwD"/>

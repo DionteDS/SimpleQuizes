@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import JGProgressHUD
 
 class SpaceViewController: UIViewController {
     
@@ -15,17 +16,21 @@ class SpaceViewController: UIViewController {
     @IBOutlet weak var progressBar: UIView!
     @IBOutlet weak var questionNumberLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var checkBtn: UIButton!
+    
     
     private var allQuestions = SpaceQuestionBank()
     private var questionNumber = 0
     private var score = 0
     private var userAnswer = ""
+    private var hud = JGProgressHUD(style: .dark)
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         nextQuestion()
+        print(allQuestions.list.count)
         
     }
     
@@ -51,16 +56,21 @@ class SpaceViewController: UIViewController {
     
     // Go to the next question
     private func nextQuestion() {
-        if questionNumber <= 1 {
+        if questionNumber <= 12 {
             questionLabel.text = allQuestions.list[questionNumber].textQuestion
             updateUI()
-        } else if questionNumber == 2 {
+        } else if questionNumber == 13 {
             updateUI()
+            
             questionLabel.text = ""
+            
+            // Create the alert message when done
             let alert = UIAlertController(title: "Total Score: \(score)", message: "Good job. Would you like to restart?", preferredStyle: .alert)
+            
             let restartAction = UIAlertAction(title: "Restart", style: .default) { (action) in
                 self.restart()
             }
+            
             alert.addAction(restartAction)
             present(alert, animated: true, completion: nil)
         } else {
@@ -74,10 +84,16 @@ class SpaceViewController: UIViewController {
         let currentAnswer = allQuestions.list[questionNumber].answer
         
         if userAnswer == currentAnswer || userAnswer == currentAnswer.lowercased() {
-            print("Correct")
+            hud.textLabel.text = "Correct!"
+            hud.indicatorView = JGProgressHUDSuccessIndicatorView(image: UIImage(named: "check")!)
+            hud.show(in: self.view)
+            hud.dismiss(afterDelay: 0.3)
             score += 1
         } else {
-            print("Wrong!")
+            hud.textLabel.text = "Wrong!"
+            hud.indicatorView = JGProgressHUDErrorIndicatorView(image: UIImage(named: "error")!)
+            hud.show(in: self.view)
+            hud.dismiss(afterDelay: 0.3)
         }
     }
     
@@ -99,7 +115,9 @@ class SpaceViewController: UIViewController {
 extension SpaceViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
+        DispatchQueue.main.async {
+            textField.resignFirstResponder()
+        }
         return true
     }
     
