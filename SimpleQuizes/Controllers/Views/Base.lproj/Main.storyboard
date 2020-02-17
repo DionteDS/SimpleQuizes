@@ -239,7 +239,7 @@
                                 <rect key="frame" x="7" y="428" width="400" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="BWw-5F-OkX"/>
-                                    <constraint firstAttribute="width" constant="400" id="Fpo-fs-K5u"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="400" id="Fpo-fs-K5u"/>
                                 </constraints>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
@@ -255,7 +255,7 @@
                                     <constraint firstAttribute="height" constant="40" id="uRx-Db-t5Q"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
-                                <state key="normal" title="Check">
+                                <state key="normal" title="Check Answer">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -263,11 +263,11 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/13" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcU-Vr-1ly">
-                                <rect key="frame" x="20" y="654" width="32.5" height="34"/>
+                                <rect key="frame" x="20" y="654" width="39.5" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="RYc-ni-4zE"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -277,11 +277,11 @@
                                 <color key="backgroundColor" red="0.9883042165" green="1" blue="0.658564967" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LlN-5h-1EG">
-                                <rect key="frame" x="323" y="654" width="71" height="34"/>
+                                <rect key="frame" x="308" y="654" width="86" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="RfF-lp-iQX"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -294,6 +294,7 @@
                             <constraint firstItem="dNQ-77-eAN" firstAttribute="centerY" secondItem="2vO-ok-hbv" secondAttribute="centerY" id="EU9-1Q-bzR"/>
                             <constraint firstItem="BWZ-qe-2Ym" firstAttribute="trailing" secondItem="LlN-5h-1EG" secondAttribute="trailing" constant="20" id="USa-zM-m5k"/>
                             <constraint firstItem="hcU-Vr-1ly" firstAttribute="top" secondItem="dNQ-77-eAN" secondAttribute="bottom" constant="186" id="UcU-Sr-f04"/>
+                            <constraint firstItem="LlN-5h-1EG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hcU-Vr-1ly" secondAttribute="trailing" constant="8" symbolic="YES" id="YSp-4h-XPP"/>
                             <constraint firstItem="BWZ-qe-2Ym" firstAttribute="trailing" secondItem="tdQ-Dk-0Rs" secondAttribute="trailing" constant="20" id="dVn-2i-48F"/>
                             <constraint firstItem="tdQ-Dk-0Rs" firstAttribute="top" secondItem="BWZ-qe-2Ym" secondAttribute="top" constant="45" id="h5N-uB-Isp"/>
                             <constraint firstItem="hcU-Vr-1ly" firstAttribute="leading" secondItem="BWZ-qe-2Ym" secondAttribute="leading" constant="20" id="ikP-ir-0bf"/>

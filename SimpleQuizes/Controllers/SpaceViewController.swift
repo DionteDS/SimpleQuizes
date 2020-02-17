@@ -26,11 +26,12 @@ class SpaceViewController: UIViewController {
         super.viewDidLoad()
 
         nextQuestion()
-        print(allQuestions.list.count)
         
     }
     
     @IBAction func checkAnswer(_ sender: UIButton) {
+        
+        sender.pulse()
         
         checkAnswer()
         questionNumber += 1
@@ -38,6 +39,7 @@ class SpaceViewController: UIViewController {
         
     }
     
+    // update the UI
     private func updateUI() {
         scoreLabel.text = "Score: \(score)"
         questionNumberLabel.text = "\(questionNumber + 1) / 13"
@@ -47,21 +49,26 @@ class SpaceViewController: UIViewController {
         answerTextField.text = ""
     }
     
+    // Go to the next question
     private func nextQuestion() {
         if questionNumber <= 1 {
             questionLabel.text = allQuestions.list[questionNumber].textQuestion
-            print(questionNumber)
             updateUI()
         } else if questionNumber == 2 {
-            print(questionNumber)
             updateUI()
             questionLabel.text = ""
-            print("Done. Would you like to restart?")
+            let alert = UIAlertController(title: "Total Score: \(score)", message: "Good job. Would you like to restart?", preferredStyle: .alert)
+            let restartAction = UIAlertAction(title: "Restart", style: .default) { (action) in
+                self.restart()
+            }
+            alert.addAction(restartAction)
+            present(alert, animated: true, completion: nil)
         } else {
             print("Error")
         }
     }
     
+    // Check answer
     private func checkAnswer() {
         
         let currentAnswer = allQuestions.list[questionNumber].answer
@@ -74,9 +81,21 @@ class SpaceViewController: UIViewController {
         }
     }
     
+    // Restart the quiz and shuffle the questions
+    private func restart() {
+        
+        let shuffleQuestion = allQuestions.list.shuffled()
+        allQuestions.list = shuffleQuestion
+        
+        score = 0
+        questionNumber = 0
+        nextQuestion()
+    }
+    
 
 }
 
+// MARK: - UITextFieldDelegate Methods
 extension SpaceViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
