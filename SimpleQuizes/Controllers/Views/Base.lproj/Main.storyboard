@@ -115,10 +115,10 @@
             </objects>
             <point key="canvasLocation" x="-208.69565217391306" y="-66.294642857142861"/>
         </scene>
-        <!--View Controller-->
+        <!--Science View Controller-->
         <scene sceneID="3hX-15-wcl">
             <objects>
-                <viewController id="UAc-hU-HLO" customClass="ViewController" customModule="SimpleQuizes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="UAc-hU-HLO" customClass="ScienceViewController" customModule="SimpleQuizes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V2N-RV-2ap">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -308,6 +308,8 @@
                         <outlet property="answerTextField" destination="dNQ-77-eAN" id="4Io-fv-YVE"/>
                         <outlet property="progressBar" destination="NN3-hE-wFp" id="vb7-OC-nwU"/>
                         <outlet property="questionLabel" destination="tdQ-Dk-0Rs" id="MWJ-D6-RYA"/>
+                        <outlet property="questionNumberLabel" destination="hcU-Vr-1ly" id="3xI-GL-TwD"/>
+                        <outlet property="scoreLabel" destination="LlN-5h-1EG" id="4NT-eo-8BG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nQX-vI-rpX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

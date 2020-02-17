@@ -20,6 +20,8 @@ struct SpaceQuestionBank {
         
         list.append(SpaceQuestionModel(textQuestion: "What is the name of the 2nd biggest planet in our solar system?", answer: "Saturn"))
         
+        list.append(SpaceQuestionModel(textQuestion: "", answer: ""))
+        
     }
     
 }

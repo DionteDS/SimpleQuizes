@@ -13,6 +13,8 @@ class SpaceViewController: UIViewController {
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var answerTextField: UITextField!
     @IBOutlet weak var progressBar: UIView!
+    @IBOutlet weak var questionNumberLabel: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel!
     
     private var allQuestions = SpaceQuestionBank()
     private var questionNumber = 0
@@ -23,14 +25,41 @@ class SpaceViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        questionLabel.text = allQuestions.list.first?.textQuestion
+        nextQuestion()
+        print(allQuestions.list.count)
         
     }
     
     @IBAction func checkAnswer(_ sender: UIButton) {
         
         checkAnswer()
+        questionNumber += 1
+        nextQuestion()
         
+    }
+    
+    private func updateUI() {
+        scoreLabel.text = "Score: \(score)"
+        questionNumberLabel.text = "\(questionNumber + 1) / 13"
+            
+        progressBar.frame.size.width = (view.frame.size.width) / 13 * CGFloat(questionNumber + 1)
+        
+        answerTextField.text = ""
+    }
+    
+    private func nextQuestion() {
+        if questionNumber <= 1 {
+            questionLabel.text = allQuestions.list[questionNumber].textQuestion
+            print(questionNumber)
+            updateUI()
+        } else if questionNumber == 2 {
+            print(questionNumber)
+            updateUI()
+            questionLabel.text = ""
+            print("Done. Would you like to restart?")
+        } else {
+            print("Error")
+        }
     }
     
     private func checkAnswer() {
@@ -39,6 +68,7 @@ class SpaceViewController: UIViewController {
         
         if userAnswer == currentAnswer || userAnswer == currentAnswer.lowercased() {
             print("Correct")
+            score += 1
         } else {
             print("Wrong!")
         }

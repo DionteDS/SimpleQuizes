@@ -10,7 +10,7 @@
 		421B702823F7D1C100AFAA32 /* Pods_SimpleQuizes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4BF5C9F0BBFD9D022423674 /* Pods_SimpleQuizes.framework */; };
 		421DC05D23F7263C0042BD61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421DC05C23F7263C0042BD61 /* AppDelegate.swift */; };
 		421DC05F23F7263C0042BD61 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421DC05E23F7263C0042BD61 /* SceneDelegate.swift */; };
-		421DC06123F7263C0042BD61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421DC06023F7263C0042BD61 /* ViewController.swift */; };
+		421DC06123F7263C0042BD61 /* ScienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421DC06023F7263C0042BD61 /* ScienceViewController.swift */; };
 		421DC06423F7263C0042BD61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 421DC06223F7263C0042BD61 /* Main.storyboard */; };
 		421DC06623F7263D0042BD61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 421DC06523F7263D0042BD61 /* Assets.xcassets */; };
 		421DC06923F7263D0042BD61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 421DC06723F7263D0042BD61 /* LaunchScreen.storyboard */; };
@@ -32,7 +32,7 @@
 		421DC05923F7263C0042BD61 /* SimpleQuizes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleQuizes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		421DC05C23F7263C0042BD61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		421DC05E23F7263C0042BD61 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		421DC06023F7263C0042BD61 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		421DC06023F7263C0042BD61 /* ScienceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScienceViewController.swift; sourceTree = "<group>"; };
 		421DC06323F7263C0042BD61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		421DC06523F7263D0042BD61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		421DC06823F7263D0042BD61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -131,7 +131,7 @@
 			children = (
 				4221EAE323F8F0B9002E3D7A /* CategoryViewController.swift */,
 				422EA11823FB10260081BF7F /* SpaceViewController.swift */,
-				421DC06023F7263C0042BD61 /* ViewController.swift */,
+				421DC06023F7263C0042BD61 /* ScienceViewController.swift */,
 				4221EAE123F8E399002E3D7A /* WelcomeViewController.swift */,
 				42DDA23523F72F8300A0798B /* Views */,
 			);
@@ -286,7 +286,7 @@
 				422EA11D23FB10C80081BF7F /* SpaceQuestionBank.swift in Sources */,
 				42DDA23823F72FB200A0798B /* ScienceQuestionModel.swift in Sources */,
 				4221EAE723F8F74B002E3D7A /* CategoryCell+Deisgn.swift in Sources */,
-				421DC06123F7263C0042BD61 /* ViewController.swift in Sources */,
+				421DC06123F7263C0042BD61 /* ScienceViewController.swift in Sources */,
 				42323C0923F748F3004E629D /* CustomButton.swift in Sources */,
 				422EA11923FB10260081BF7F /* SpaceViewController.swift in Sources */,
 				421DC05D23F7263C0042BD61 /* AppDelegate.swift in Sources */,

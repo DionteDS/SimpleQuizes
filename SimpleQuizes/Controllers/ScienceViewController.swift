@@ -10,7 +10,7 @@ import UIKit
 import JGProgressHUD 
 
 
-class ViewController: UIViewController {
+class ScienceViewController: UIViewController {
     
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var questionNumberLabel: UILabel!
