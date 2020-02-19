@@ -30,10 +30,14 @@ class SpaceViewController: UIViewController {
         super.viewDidLoad()
 
         nextQuestion()
-        print(allQuestions.list.count)
+        
+        navigationItem.title = "Space Quiz"
+        navigationItem.largeTitleDisplayMode = .always
+        
         
     }
     
+    // MARK: - Check Answer
     @IBAction func checkAnswer(_ sender: UIButton) {
         
         sender.pulse()

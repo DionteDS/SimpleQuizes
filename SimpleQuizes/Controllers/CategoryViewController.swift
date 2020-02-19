@@ -108,6 +108,8 @@ extension CategoryViewController: UICollectionViewDelegate, UICollectionViewData
             performSegue(withIdentifier: "goToSciVC", sender: self)
         case Category.Space.rawValue:
             performSegue(withIdentifier: "goToSpaceVC", sender: self)
+        case Category.Planet.rawValue:
+            performSegue(withIdentifier: "goToPlanetVC", sender: self)
         default:
             print("Error no vc's")
         }
