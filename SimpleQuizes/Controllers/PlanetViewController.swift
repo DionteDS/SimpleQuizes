@@ -46,6 +46,7 @@ class PlanetViewController: UIViewController {
         nextQuestion()
     }
     
+    // Update the UI
     private func updateUI() {
         scoreLabel.text = "Score: \(score)"
         questionNumberLabel.text = "\(questionNumber + 1) / 13"
@@ -63,9 +64,18 @@ class PlanetViewController: UIViewController {
             updateUI()
         } else if questionNumber == 13 {
             updateUI()
-            print("Done")
             
             questionLabel.text = ""
+            
+            let alert = UIAlertController(title: "Total Score: \(score)", message: "Good Job. Would you like to restart?", preferredStyle: .alert)
+            
+            let restartAction = UIAlertAction(title: "Restart", style: .default) { (action) in
+                self.restart()
+            }
+            
+            alert.addAction(restartAction)
+            present(alert, animated: true, completion: nil)
+            
         } else {
             print("Erorr")
         }
@@ -92,8 +102,20 @@ class PlanetViewController: UIViewController {
         }
         
     }
+    
+    // Restart the quiz and shuffle the questions
+    private func restart() {
+        let shuffleQuestions = allQuestions.list.shuffled()
+        allQuestions.list = shuffleQuestions
+        
+        score = 0
+        questionNumber = 0
+        nextQuestion()
+    }
 
 }
+
+//MARK: - UITextField Delegate Methods
 
 extension PlanetViewController: UITextFieldDelegate {
     
