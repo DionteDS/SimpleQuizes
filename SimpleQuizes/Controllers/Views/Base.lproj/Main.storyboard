@@ -144,6 +144,7 @@
                     <navigationItem key="navigationItem" id="f2e-qR-Tt5"/>
                     <connections>
                         <outlet property="answerTextField" destination="DIZ-3J-LVP" id="Nhc-oR-t30"/>
+                        <outlet property="progressBar" destination="WWx-hz-2hB" id="bdk-tI-vuu"/>
                         <outlet property="questionLabel" destination="sxe-vw-Lhu" id="qEe-VM-rkA"/>
                         <outlet property="questionNumberLabel" destination="9pG-qg-Oap" id="JN9-Hc-scG"/>
                         <outlet property="scoreLabel" destination="sKP-HN-pa3" id="JOM-dJ-CSl"/>

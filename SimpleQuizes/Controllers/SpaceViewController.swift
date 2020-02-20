@@ -53,7 +53,7 @@ class SpaceViewController: UIViewController {
         scoreLabel.text = "Score: \(score)"
         questionNumberLabel.text = "\(questionNumber + 1) / 13"
             
-        progressBar.frame.size.width = (view.frame.size.width) / 13 * CGFloat(questionNumber + 1)
+        progressBar.frame.size.width = (view.frame.size.width) / 14 * CGFloat(questionNumber + 1)
         
         answerTextField.text = ""
     }

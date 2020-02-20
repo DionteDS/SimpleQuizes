@@ -15,13 +15,14 @@ class PlanetViewController: UIViewController {
     @IBOutlet weak var answerTextField: UITextField!
     @IBOutlet weak var questionNumberLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var progressBar: UIView!
     
     
-    var allQuestions = PlanetQuestionBank()
-    var questionNumber = 0
-    var score = 0
-    var userAnswer = ""
-    var hud = JGProgressHUD(style: .dark)
+    private var allQuestions = PlanetQuestionBank()
+    private var questionNumber = 0
+    private var score = 0
+    private var userAnswer = ""
+    private var hud = JGProgressHUD(style: .dark)
     
 
     override func viewDidLoad() {
@@ -45,25 +46,49 @@ class PlanetViewController: UIViewController {
         nextQuestion()
     }
     
-    // Go the next question
-    func nextQuestion() {
+    private func updateUI() {
+        scoreLabel.text = "Score: \(score)"
+        questionNumberLabel.text = "\(questionNumber + 1) / 13"
         
-        if questionNumber <= 4 {
+        progressBar.frame.size.width = (view.frame.size.width) / 14 * CGFloat(questionNumber + 1)
+        
+        answerTextField.text = ""
+    }
+    
+    // Go the next question
+    private func nextQuestion() {
+        
+        if questionNumber <= 12 {
             questionLabel.text = allQuestions.list[questionNumber].textQuestion
+            updateUI()
+        } else if questionNumber == 13 {
+            updateUI()
+            print("Done")
+            
+            questionLabel.text = ""
+        } else {
+            print("Erorr")
         }
         
     }
     
     
     // Check if the answer is right or wrong
-    func checkAnswer() {
+    private func checkAnswer() {
         
         let correctAnswer = allQuestions.list[questionNumber].answer
         
         if userAnswer == correctAnswer || userAnswer == correctAnswer.lowercased() || userAnswer == correctAnswer.uppercased() {
-            print("correct!")
+            hud.textLabel.text = "Correct!"
+            hud.indicatorView = JGProgressHUDSuccessIndicatorView(image: UIImage(named: "check")!)
+            hud.show(in: self.view)
+            hud.dismiss(afterDelay: 0.3)
+            score += 1
         } else {
-            print("Wrong!")
+            hud.textLabel.text = "Wrong!"
+            hud.indicatorView = JGProgressHUDErrorIndicatorView(image: UIImage(named: "error")!)
+            hud.show(in: self.view)
+            hud.dismiss(afterDelay: 0.3)
         }
         
     }
