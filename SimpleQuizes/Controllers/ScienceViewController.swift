@@ -17,12 +17,12 @@ class ScienceViewController: UIViewController {
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var progressBar: UIView!
     
-    var allQuestions = ScienceQuestionBank()
-    var pickedAnswer = false
-    var questionNumber = 0
-    var score = 0
+    private var allQuestions = ScienceQuestionBank()
+    private var pickedAnswer = false
+    private var questionNumber = 0
+    private var score = 0
     
-    var hud = JGProgressHUD(style: .dark)
+    private var hud = JGProgressHUD(style: .dark)
     
 
     override func viewDidLoad() {
@@ -47,6 +47,7 @@ class ScienceViewController: UIViewController {
     
     
     
+    // Check answer button
     @IBAction func answerButtonTapped(_ sender: AnyObject) {
         
         if sender.tag == 1 {
@@ -63,8 +64,8 @@ class ScienceViewController: UIViewController {
         
     }
     
-    
-    func updateUI() {
+    // update the UI
+    private func updateUI() {
         
         scoreLabel.text = "Score: \(score)"
         questionNumberLabel.text = "\(questionNumber + 1) / 13"
@@ -73,13 +74,17 @@ class ScienceViewController: UIViewController {
         
     }
     
+    // Go on to the next question
     private func nextQuestion() {
         
         if questionNumber <= 12 {
             questionLabel.text = allQuestions.list[questionNumber].questionText
             
             updateUI()
-        } else {
+        } else if questionNumber == 13 {
+            
+            questionLabel.text = ""
+            
             let alert = UIAlertController(title: "Good Job!", message: "You have finished all questions. Would you like to start over?", preferredStyle: .alert)
             
             let restartAction = UIAlertAction(title: "Restart", style: .default) { (action) in
@@ -88,6 +93,9 @@ class ScienceViewController: UIViewController {
             
             alert.addAction(restartAction)
             present(alert, animated: true, completion: nil)
+            
+        } else {
+            print("Error")
         }
         
     }
@@ -120,10 +128,12 @@ class ScienceViewController: UIViewController {
     
     // Restart the quiz and also shuffle the questions
     private func restart() {
-        score = 0
-        questionNumber = 0
+        
         let shuffleQuestion = allQuestions.list.shuffled()
         allQuestions.list = shuffleQuestion
+        
+        score = 0
+        questionNumber = 0
         nextQuestion()
     }
     

@@ -431,13 +431,16 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jlz-Db-CBw">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter answer here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jlz-Db-CBw">
                                 <rect key="frame" x="7" y="428" width="400" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="AsS-DZ-L4Q"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="JIm-ll-kMm" id="ZoS-Ba-OXY"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/13" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WSS-YE-CeK">
                                 <rect key="frame" x="20" y="654" width="40" height="22.5"/>
@@ -493,6 +496,7 @@
                     <navigationItem key="navigationItem" id="0c2-Ey-MGw"/>
                     <connections>
                         <outlet property="answerTextField" destination="jlz-Db-CBw" id="ckb-Ta-I06"/>
+                        <outlet property="progressBar" destination="ths-Qs-Ugv" id="Ak9-TW-amJ"/>
                         <outlet property="questionLabel" destination="7Qi-fn-I5X" id="a90-yu-QCp"/>
                         <outlet property="questionNumberLabel" destination="WSS-YE-CeK" id="Xtr-BX-gZM"/>
                         <outlet property="scoreLabel" destination="S6r-Dp-LAF" id="3jL-Gw-lx0"/>

@@ -39,6 +39,5 @@ struct PlanetQuestionBank {
         
         list.append(PlanetQuestionModel(textQuestion: "The moon Titan orbits what planet?", answer: "Saturn"))
         
-        list.append(PlanetQuestionModel(textQuestion: "", answer: ""))
     }
 }

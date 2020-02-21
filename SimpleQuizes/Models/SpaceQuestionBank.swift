@@ -42,7 +42,6 @@ struct SpaceQuestionBank {
         
         list.append(SpaceQuestionModel(textQuestion: "Ganymede is a moon of which planet?", answer: "Jupiter"))
         
-        list.append(SpaceQuestionModel(textQuestion: "", answer: ""))
         
     }
     
