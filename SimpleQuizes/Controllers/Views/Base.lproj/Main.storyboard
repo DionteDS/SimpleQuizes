@@ -74,7 +74,6 @@
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="Tqb-bm-AmC"/>
-                                    <constraint firstAttribute="width" constant="374" id="hnT-87-Fdo"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -125,6 +124,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.28278265349999998" green="0.30892591219999999" blue="0.37938876780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="sKP-HN-pa3" firstAttribute="leading" secondItem="9pG-qg-Oap" secondAttribute="trailing" constant="233" id="0x4-KD-76b"/>
                             <constraint firstItem="9pG-qg-Oap" firstAttribute="leading" secondItem="Yb4-CN-1Wz" secondAttribute="leading" constant="20" id="18R-hz-1ZL"/>
                             <constraint firstItem="9CW-Bt-utb" firstAttribute="leading" secondItem="Yb4-CN-1Wz" secondAttribute="leading" constant="20" id="Gfp-ag-Jrh"/>
                             <constraint firstItem="9pG-qg-Oap" firstAttribute="top" secondItem="DIZ-3J-LVP" secondAttribute="bottom" constant="186" id="Ivz-BU-nHD"/>
@@ -203,6 +203,7 @@
                         <segue destination="UAc-hU-HLO" kind="show" identifier="goToSciVC" id="AAv-At-A6F"/>
                         <segue destination="mU6-Lx-MmQ" kind="show" identifier="goToSpaceVC" id="8nG-vX-hbR"/>
                         <segue destination="kNo-2d-j9w" kind="show" identifier="goToPlanetVC" id="jHi-EE-g6Z"/>
+                        <segue destination="JIm-ll-kMm" kind="show" identifier="dinosaurQuizVC" id="Whg-gS-dnd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aMf-rb-6hf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -411,6 +412,95 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nQX-vI-rpX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-210.1449275362319" y="723.88392857142856"/>
+        </scene>
+        <!--Dinosaur View Controller-->
+        <scene sceneID="IHq-gX-2uw">
+            <objects>
+                <viewController id="JIm-ll-kMm" customClass="DinosaurViewController" customModule="SimpleQuizes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cyv-30-Zfg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Qi-fn-I5X">
+                                <rect key="frame" x="20" y="185" width="374" height="90"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="Q5i-AA-hGQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jlz-Db-CBw">
+                                <rect key="frame" x="7" y="428" width="400" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="AsS-DZ-L4Q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/13" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WSS-YE-CeK">
+                                <rect key="frame" x="20" y="654" width="40" height="22.5"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S6r-Dp-LAF">
+                                <rect key="frame" x="308" y="653" width="86" height="22.5"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ths-Qs-Ugv">
+                                <rect key="frame" x="0.0" y="733" width="23" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.98436961349999996" blue="0.65134737249999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cm8-ar-pKk">
+                                <rect key="frame" x="20" y="801" width="373" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="MfD-vW-CL1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                <state key="normal" title="Check Answer">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkAnswerBtn:" destination="JIm-ll-kMm" eventType="touchUpInside" id="Ns9-2I-nbd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.28278265349999998" green="0.30892591219999999" blue="0.37938876780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="EKf-ft-w7p" firstAttribute="trailing" secondItem="Cm8-ar-pKk" secondAttribute="trailing" constant="21" id="4Ld-SY-quP"/>
+                            <constraint firstItem="7Qi-fn-I5X" firstAttribute="top" secondItem="EKf-ft-w7p" secondAttribute="top" constant="45" id="5ih-hE-hei"/>
+                            <constraint firstItem="Cm8-ar-pKk" firstAttribute="leading" secondItem="EKf-ft-w7p" secondAttribute="leading" constant="20" id="8BN-MQ-rcn"/>
+                            <constraint firstItem="WSS-YE-CeK" firstAttribute="top" secondItem="jlz-Db-CBw" secondAttribute="bottom" constant="186" id="JyV-aW-O0Y"/>
+                            <constraint firstItem="S6r-Dp-LAF" firstAttribute="leading" secondItem="WSS-YE-CeK" secondAttribute="trailing" constant="248" id="P3r-s8-4Zp"/>
+                            <constraint firstItem="EKf-ft-w7p" firstAttribute="trailing" secondItem="7Qi-fn-I5X" secondAttribute="trailing" constant="20" id="SUC-tc-9Wv"/>
+                            <constraint firstItem="EKf-ft-w7p" firstAttribute="bottom" secondItem="Cm8-ar-pKk" secondAttribute="bottom" constant="21" id="YeV-QC-zVN"/>
+                            <constraint firstItem="jlz-Db-CBw" firstAttribute="top" secondItem="7Qi-fn-I5X" secondAttribute="bottom" constant="153" id="bM3-If-f4K"/>
+                            <constraint firstItem="S6r-Dp-LAF" firstAttribute="top" secondItem="jlz-Db-CBw" secondAttribute="bottom" constant="185" id="f5s-fh-xlO"/>
+                            <constraint firstItem="EKf-ft-w7p" firstAttribute="trailing" secondItem="jlz-Db-CBw" secondAttribute="trailing" constant="7" id="gb1-L8-uQO"/>
+                            <constraint firstItem="EKf-ft-w7p" firstAttribute="trailing" secondItem="S6r-Dp-LAF" secondAttribute="trailing" constant="20" id="oMI-gb-nSA"/>
+                            <constraint firstItem="jlz-Db-CBw" firstAttribute="leading" secondItem="EKf-ft-w7p" secondAttribute="leading" constant="7" id="oqs-f3-L4d"/>
+                            <constraint firstItem="7Qi-fn-I5X" firstAttribute="leading" secondItem="EKf-ft-w7p" secondAttribute="leading" constant="20" id="xhq-5x-XIe"/>
+                            <constraint firstItem="WSS-YE-CeK" firstAttribute="leading" secondItem="EKf-ft-w7p" secondAttribute="leading" constant="20" id="ypf-To-JAe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EKf-ft-w7p"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0c2-Ey-MGw"/>
+                    <connections>
+                        <outlet property="answerTextField" destination="jlz-Db-CBw" id="ckb-Ta-I06"/>
+                        <outlet property="questionLabel" destination="7Qi-fn-I5X" id="a90-yu-QCp"/>
+                        <outlet property="questionNumberLabel" destination="WSS-YE-CeK" id="Xtr-BX-gZM"/>
+                        <outlet property="scoreLabel" destination="S6r-Dp-LAF" id="3jL-Gw-lx0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="auU-fH-E4x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="813" y="723"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="h40-Nu-lwn">

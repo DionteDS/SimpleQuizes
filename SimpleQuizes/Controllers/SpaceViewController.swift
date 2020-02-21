@@ -85,9 +85,9 @@ class SpaceViewController: UIViewController {
     // Check answer
     private func checkAnswer() {
         
-        let currentAnswer = allQuestions.list[questionNumber].answer
+        let correctAnswer = allQuestions.list[questionNumber].answer
         
-        if userAnswer == currentAnswer || userAnswer == currentAnswer.lowercased() {
+        if userAnswer == correctAnswer || userAnswer == correctAnswer.lowercased() {
             hud.textLabel.text = "Correct!"
             hud.indicatorView = JGProgressHUDSuccessIndicatorView(image: UIImage(named: "check")!)
             hud.show(in: self.view)

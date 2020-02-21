@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42058A2424006289004AF4D2 /* DinosaurViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42058A2324006289004AF4D2 /* DinosaurViewController.swift */; };
+		42058A2624006550004AF4D2 /* DinosaurQustionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42058A2524006550004AF4D2 /* DinosaurQustionModel.swift */; };
+		42058A2A24006603004AF4D2 /* DinosaurQuestoinBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42058A2924006603004AF4D2 /* DinosaurQuestoinBank.swift */; };
 		421B702823F7D1C100AFAA32 /* Pods_SimpleQuizes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4BF5C9F0BBFD9D022423674 /* Pods_SimpleQuizes.framework */; };
 		421DC05D23F7263C0042BD61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421DC05C23F7263C0042BD61 /* AppDelegate.swift */; };
 		421DC05F23F7263C0042BD61 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421DC05E23F7263C0042BD61 /* SceneDelegate.swift */; };
@@ -32,6 +35,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		42058A2324006289004AF4D2 /* DinosaurViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinosaurViewController.swift; sourceTree = "<group>"; };
+		42058A2524006550004AF4D2 /* DinosaurQustionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinosaurQustionModel.swift; sourceTree = "<group>"; };
+		42058A2924006603004AF4D2 /* DinosaurQuestoinBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinosaurQuestoinBank.swift; sourceTree = "<group>"; };
 		421B702423F7D19700AFAA32 /* JGProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JGProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		421DC05923F7263C0042BD61 /* SimpleQuizes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleQuizes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		421DC05C23F7263C0042BD61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				4221EAE323F8F0B9002E3D7A /* CategoryViewController.swift */,
+				42058A2324006289004AF4D2 /* DinosaurViewController.swift */,
 				42C5AB9E23FDD627006E2012 /* PlanetViewController.swift */,
 				422EA11823FB10260081BF7F /* SpaceViewController.swift */,
 				421DC06023F7263C0042BD61 /* ScienceViewController.swift */,
@@ -165,6 +172,8 @@
 				422EA11C23FB10C80081BF7F /* SpaceQuestionBank.swift */,
 				42C5ABA023FDD97F006E2012 /* PlanetQuestionModel.swift */,
 				42C5ABA223FDD9C1006E2012 /* PlanetQuestionBank.swift */,
+				42058A2524006550004AF4D2 /* DinosaurQustionModel.swift */,
+				42058A2924006603004AF4D2 /* DinosaurQuestoinBank.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -298,7 +307,9 @@
 				42C5ABA123FDD97F006E2012 /* PlanetQuestionModel.swift in Sources */,
 				422EA11D23FB10C80081BF7F /* SpaceQuestionBank.swift in Sources */,
 				42DDA23823F72FB200A0798B /* ScienceQuestionModel.swift in Sources */,
+				42058A2624006550004AF4D2 /* DinosaurQustionModel.swift in Sources */,
 				4221EAE723F8F74B002E3D7A /* CategoryCell+Deisgn.swift in Sources */,
+				42058A2A24006603004AF4D2 /* DinosaurQuestoinBank.swift in Sources */,
 				421DC06123F7263C0042BD61 /* ScienceViewController.swift in Sources */,
 				42C5AB9F23FDD627006E2012 /* PlanetViewController.swift in Sources */,
 				422EA11F23FB24920081BF7F /* UIButtonPulse.swift in Sources */,
@@ -311,6 +322,7 @@
 				42DDA23A23F7300600A0798B /* ScienceQuestionBank.swift in Sources */,
 				421DC05F23F7263C0042BD61 /* SceneDelegate.swift in Sources */,
 				4221EAE223F8E399002E3D7A /* WelcomeViewController.swift in Sources */,
+				42058A2424006289004AF4D2 /* DinosaurViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
